@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.Hotel">
+    <stylesheets>
+        <URL value="@stage.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="1.0" layoutY="21.0" stroke="WHITE" width="1600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="9.14" radius="3.0700000000000003" width="5.14" />
+         </effect>
+      </Rectangle>
+      <Label fx:id="label_title" alignment="CENTER" layoutX="14.0" prefHeight="50.0" prefWidth="200.0" text="Login Page">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="808.0" fitWidth="885.0" layoutX="701.0" layoutY="71.0" pickOnBounds="true">
+         <image>
+            <Image url="@99.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <GridPane fx:id="pane_signin" centerShape="false" layoutX="24.0" layoutY="71.0" prefHeight="808.0" prefWidth="630.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="250.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="468.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="591.0" minHeight="10.0" prefHeight="92.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="591.0" minHeight="10.0" prefHeight="192.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="591.0" minHeight="10.0" prefHeight="162.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="132.0" prefWidth="468.0" text="Hotel Name" GridPane.columnIndex="1">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="137.0" text="User ID :" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="137.0" text="Password :" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user" prefHeight="25.0" prefWidth="248.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="pass" prefHeight="25.0" prefWidth="248.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="sign_in" mnemonicParsing="false" onAction="#Logged_in" prefHeight="38.0" prefWidth="123.0" text="Sign In" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" prefHeight="62.0" prefWidth="210.0" text="Create New Account " GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="sign_up" mnemonicParsing="false" onAction="#Signing_up" prefHeight="38.0" prefWidth="92.0" text="Sign Up" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="label_message" alignment="TOP_CENTER" prefHeight="187.0" prefWidth="226.0" text="Invalid Credentials" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pane_signup" layoutX="30.0" layoutY="69.0" prefHeight="808.0" prefWidth="639.0" visible="false">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="316.0" minHeight="10.0" prefHeight="281.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="191.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="249.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="218.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="217.0" text="User ID" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="52.0" prefWidth="216.0" text="Password" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="52.0" prefWidth="242.0" text="Phone Number" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="52.0" prefWidth="228.0" text="Address" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" prefWidth="110.0" text="Done" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" prefHeight="118.0" prefWidth="248.0" text="Hotel Name" GridPane.columnIndex="1">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#Back" text="Back" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

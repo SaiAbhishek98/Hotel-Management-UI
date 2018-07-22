@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.StageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0dce8" height="55.0" layoutX="-155.0" layoutY="36.0" stroke="#4af3ff78" strokeType="INSIDE" width="1600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#446583" height="135.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" width="1600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+         <effect>
+            <DropShadow color="#88bdff" />
+         </effect>
+      </Rectangle>
+      <JFXButton focusTraversable="false" layoutX="217.0" layoutY="94.0" onAction="#RoomClick" prefHeight="66.0" prefWidth="187.0" ripplerFill="WHITE" text="Rooms" textFill="WHITE" AnchorPane.leftAnchor="217.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton focusTraversable="false" layoutX="591.0" layoutY="94.0" onAction="#ConfernceClick" prefHeight="66.0" prefWidth="187.0" ripplerFill="WHITE" text="Conference Halls" textFill="WHITE" AnchorPane.leftAnchor="591.0" AnchorPane.rightAnchor="822.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton focusTraversable="false" layoutX="995.0" layoutY="94.0" onAction="#TablesClick" prefHeight="66.0" prefWidth="187.0" ripplerFill="WHITE" text="Table" textFill="WHITE" AnchorPane.rightAnchor="418.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="label_heading" layoutX="74.0" layoutY="4.0" prefHeight="50.0" prefWidth="215.0" text="Home" textFill="#010f25">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="Rooms" layoutY="192.0" prefHeight="710.0" prefWidth="1600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <DatePicker layoutX="132.0" layoutY="364.0" prefHeight="35.0" prefWidth="324.0" />
+            <Label fx:id="label_roomName" alignment="CENTER" layoutX="133.0" layoutY="231.0" prefHeight="41.0" prefWidth="324.0" text="Room Name">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_Cost" alignment="CENTER" layoutX="139.0" layoutY="290.0" prefHeight="41.0" prefWidth="311.0" text="Cost">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_Desc" alignment="TOP_LEFT" layoutX="585.0" layoutY="95.0" prefHeight="537.0" prefWidth="324.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam felis quam, rutrum ut porta sed, pretium vitae ex. Etiam quis ipsum rhoncus elit facilisis bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ligula arcu, iaculis vitae risus eget, ullamcorper porttitor est. Curabitur porttitor venenatis sem, sit amet dictum massa varius vehicula. Aliquam sollicitudin porttitor mi id ullamcorper. Nam eget purus blandit, viverra dui convallis, posuere risus. Morbi scelerisque rutrum luctus. Nam eget nulla ligula.Donec eu velit at arcu iaculis luctus sit amet sit amet ante. Morbi libero elit, dictum ut laoreet et, dignissim a ex. Duis sit amet dolor consectetur, fringilla nisl ut, tincidunt ligula. Nunc maximus porttitor dapibus. Duis enim lorem, auctor a porta sit amet, interdum eget nibh. Donec quis orci at ipsum condimentum bibendum. Etiam tincidunt hendrerit est volutpat convallis. Donec laoreet cursus lorem, ac auctor mauris placerat eu. Donec lacinia ultrices ex rhoncus semper. Vestibulum pretium ac leo a egestas. Etiam dapibus, felis sit amet suscipit vulputate, massa ipsum ultrices metus, sit amet eleifend nulla enim vitae metus. Nunc aliquam pretium consectetur. Aliquam pharetra leo ornare nunc tincidunt mollis. Sed vehicula in felis ut finibus.Nullam lacinia aliquet magna, vel vestibulum nunc eleifend eu. Mauris molestie urna quis tincidunt rutrum. Praesent elit massa, lacinia non turpis et, aliquet pharetra sem. Sed justo neque, varius sed ligula quis, dapibus feugiat tortor. Vestibulum elementum turpis sed ligula cursus condimentum. Aenean volutpat erat eget nibh rutrum, sed porttitor eros bibendum. Phasellus vehicula est id justo ullamcorper, nec placerat mauris laoreet. Phasellus maximus elit sed tincidunt dictum. Phasellus massa metus, fermentum at pellentesque ut, pretium eu arcu. Aliquam rhoncus imperdiet mauris, ut rhoncus lorem suscipit vel. Vestibulum dapibus sit amet magna id bibendum. Ut ullamcorper vestibulum faucibus.In tempus, odio fermentum sodales aliquet, felis orci feugiat est, nec sagittis elit nisi ut enim. Nullam scelerisque nibh ac aliquet placerat. Phasellus molestie erat vitae placerat commodo. Nulla egestas, mauris et elementum suscipit, libero mauris aliquam ligula, eget mattis purus urna eu tellus. Quisque vehicula ante id metus elementum sagittis. Ut eleifend pulvinar turpis, et bibendum massa tincidunt ac. Cras fringilla consequat ante, sed lobortis ex malesuada vel. Etiam maximus elit id justo ornare hendrerit. Sed id feugiat mauris, vel porttitor nunc. Vivamus dictum fermentum nibh.Proin erat quam, blandit sed neque non, blandit sagittis ex. Donec tellus sapien, tempor at ex nec, aliquam pretium leo. Vestibulum id tempor ipsum. Nullam eu mauris nisi. Nam accumsan diam ac nulla laoreet, ut volutpat quam porta. Vivamus libero felis, bibendum nec ornare et, accumsan non massa. Cras lobortis dictum nibh a aliquam. Integer vitae sapien vitae urna lacinia pulvinar. Morbi laoreet porttitor velit, ut interdum quam facilisis et. Aenean elementum faucibus felis, ut faucibus augue lacinia nec." wrapText="true" />
+            <ImageView fx:id="Iv" fitHeight="537.0" fitWidth="352.0" layoutX="922.0" layoutY="95.0" pickOnBounds="true">
+               <image>
+                  <Image url="@46976559-black-wallpaper-hd.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="228.0" layoutY="522.0" prefHeight="110.0" prefWidth="132.0" ripplerFill="#ee9c9c" text="BOOK NOW !">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox layoutX="132.0" layoutY="112.0" onAction="#CBox" prefHeight="25.0" prefWidth="311.0" promptText="Select Room" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="Cf_Halls" layoutX="10.0" layoutY="202.0" prefHeight="710.0" prefWidth="1600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="Tables" layoutX="-3.0" layoutY="196.0" prefHeight="710.0" prefWidth="1600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="Invoice" layoutX="10.0" layoutY="200.0" prefHeight="710.0" prefWidth="1600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <JFXButton layoutX="1493.0" layoutY="14.0" onAction="#LogOut" ripplerFill="#0570da" text="Log Out">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
